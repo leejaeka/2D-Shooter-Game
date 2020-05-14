@@ -1,0 +1,284 @@
+fileFormatVersion: 2
+guid: 8a2cc7cec8ab7274c92aeb0786196f85
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1720816952357495707
+    second: knight_sprite 1_0
+  - first:
+      213: 3640643610294570859
+    second: knight_sprite 1_1
+  - first:
+      213: -7387536161529666156
+    second: knight_sprite 1_2
+  - first:
+      213: -8049232795451647444
+    second: knight_sprite 1_3
+  - first:
+      213: -7883385878823621498
+    second: knight_sprite 1_4
+  - first:
+      213: 7219825307650420167
+    second: knight_sprite 1_5
+  - first:
+      213: -2356923395343977036
+    second: knight_sprite 1_6
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 2
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: knight_sprite 1_0
+      rect:
+        serializedVersion: 2
+        x: 17
+        y: 579
+        width: 737
+        height: 688
+      alignment: 9
+      pivot: {x: 0.48367682, y: 0.007498364}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56cd24f591e6e18e0800000000000000
+      internalID: -1720816952357495707
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_sprite 1_1
+      rect:
+        serializedVersion: 2
+        x: 807
+        y: 1157
+        width: 536
+        height: 231
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 1, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b6f4769131a268230800000000000000
+      internalID: 3640643610294570859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_sprite 1_2
+      rect:
+        serializedVersion: 2
+        x: 883
+        y: 752
+        width: 423
+        height: 240
+      alignment: 9
+      pivot: {x: 0.5295537, y: 0.48958284}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 495ebae70033a7990800000000000000
+      internalID: -7387536161529666156
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_sprite 1_3
+      rect:
+        serializedVersion: 2
+        x: 940
+        y: 467
+        width: 160
+        height: 50
+      alignment: 9
+      pivot: {x: 0.023623656, y: 0.6482056}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2a1ea05b616b4090800000000000000
+      internalID: -8049232795451647444
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_sprite 1_4
+      rect:
+        serializedVersion: 2
+        x: 497
+        y: 433
+        width: 134
+        height: 59
+      alignment: 9
+      pivot: {x: 0.9814257, y: 0.65177065}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68c2369af46989290800000000000000
+      internalID: -7883385878823621498
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_sprite 1_5
+      rect:
+        serializedVersion: 2
+        x: 815
+        y: 236
+        width: 71
+        height: 71
+      alignment: 9
+      pivot: {x: 0.41681337, y: 0.9436624}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cde0e27dd8f13460800000000000000
+      internalID: 7219825307650420167
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: knight_sprite 1_6
+      rect:
+        serializedVersion: 2
+        x: 648
+        y: 221
+        width: 73
+        height: 79
+      alignment: 9
+      pivot: {x: 0.6078742, y: 0.9548069}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b5f6b1d8a68a4fd0800000000000000
+      internalID: -2356923395343977036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
