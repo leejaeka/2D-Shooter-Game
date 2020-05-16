@@ -6,6 +6,7 @@ using UnityEngine;
 public class knight : MonoBehaviour
 {
     public float speed;
+    public int health;
     private Rigidbody2D rb;
     private Vector2 moveAmount;
     private Animator anim;
@@ -35,5 +36,13 @@ public class knight : MonoBehaviour
     {
         rb.MovePosition(rb.position + moveAmount * Time.fixedDeltaTime);
 
+    }
+    public void TakeDamage(int damageAmount)
+    {
+        health -= damageAmount;
+        if (health <= 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 }
