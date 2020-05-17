@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
     public Transform player; 
 
     // Start is called before the first frame update
-    void Start()
+    public virtual void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
     }
@@ -25,7 +25,7 @@ public class Enemy : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
-    
+
 
     //// Update is called once per frame
     //void Update()
