@@ -36,6 +36,10 @@ public class Projectile : MonoBehaviour
         {
             collision.GetComponent<Enemy>().TakeDamage(damage);
             DestroyProjectile();
+        } else if (collision.tag == "Player")
+        {
+            collision.GetComponent<knight>().TakeDamage(damage);
+            DestroyProjectile();
         }
     }
 }
