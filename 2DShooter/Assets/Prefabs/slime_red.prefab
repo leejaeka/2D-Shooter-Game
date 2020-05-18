@@ -115,16 +115,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f9384e02b8de3d841834a66c6bf52077, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 3
   timeBetweenAttack: 4
   damage: 1
-  health: 3
+  health: 2
   player: {fileID: 0}
   stopDistance: 3
-  summonStopDistance: 11
+  summonStopDistance: 20
   attackSpeed: 8
   enemyToSummon: {fileID: 3545896579127317459, guid: 3872d3f6109389b4e8a8e5f52ca2c780,
     type: 3}
+  timeBeforeFirstSplit: 8
   minX: -9.66
   minY: -5.42
   maxX: 14.63

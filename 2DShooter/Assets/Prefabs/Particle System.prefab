@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 4961771110897647260}
   - component: {fileID: 4306008945740011094}
   - component: {fileID: 8122677441173270797}
-  - component: {fileID: 5231602832268460917}
   m_Layer: 0
   m_Name: Particle System
   m_TagString: Untagged
@@ -4813,20 +4812,3 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!114 &5231602832268460917
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1007652151875934934}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 051c1d81e2e14e248b15474461ded32c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  speed: 1
-  lifeTime: 3
-  explosion: {fileID: 829853393421305200, guid: 4d2759b73d71e4446a40f7247dc1c2fb,
-    type: 3}
-  damage: 1

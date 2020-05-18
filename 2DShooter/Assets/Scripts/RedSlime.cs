@@ -12,6 +12,7 @@ public class RedSlime : Enemy
     private Animator anim;
     private Rigidbody2D rb;
     public Enemy enemyToSummon;
+    public float timeBeforeFirstSplit;
 
     public float minX;
     public float minY;
@@ -44,7 +45,7 @@ public class RedSlime : Enemy
             }
             else if(Vector2.Distance(transform.position, player.position) > stopDistance)
             {
-                if (Time.time >= summonTime)
+                if (Time.time >= summonTime+ timeBeforeFirstSplit)
                 {
                     anim.SetTrigger("summon");
                     summonTime = Time.time + timeBetweenSummons;
@@ -57,7 +58,7 @@ public class RedSlime : Enemy
             } else
             {      
                 anim.SetBool("isRunning", false);
-                if (Time.time >= summonTime)
+                if (Time.time >= summonTime+ timeBeforeFirstSplit)
                 {
                     anim.SetTrigger("summon");
                     summonTime = Time.time + timeBetweenSummons;
