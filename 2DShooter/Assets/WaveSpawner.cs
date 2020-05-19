@@ -40,9 +40,14 @@ public class WaveSpawner : MonoBehaviour
             {
                 yield break;
             }
-            Enemy randomEnemy = currentWave.enemies[UnityEngine.Random.Range(0, currentWave.enemies.Length)];
-            Transform randomSpot = spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length)];
-            Instantiate(randomEnemy, randomSpot.position, randomSpot.rotation);
+            foreach(Enemy enemy in currentWave.enemies)
+            {
+                Transform randomSpot = spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length)];
+                Instantiate(enemy, randomSpot.position, randomSpot.rotation);
+            }
+            //Enemy randomEnemy = currentWave.enemies[UnityEngine.Random.Range(0, currentWave.enemies.Length)];
+            //Transform randomSpot = spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length)];
+            //Instantiate(randomEnemy, randomSpot.position, randomSpot.rotation);
             if (i== currentWave.count - 1)
             {
                 finishedSpawning = true;

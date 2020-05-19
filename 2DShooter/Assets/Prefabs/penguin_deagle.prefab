@@ -553,12 +553,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a9e61d6382ba1f24b8ef9f7f7a7b72b9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 0.8
   timeBetweenAttack: 3
   damage: 3
   health: 5
   player: {fileID: 0}
-  stopDistance: 5
+  stopDistance: 7
   shotPoint: {fileID: 6017002533270398544}
   bullet: {fileID: 829853393421305200, guid: 4d2759b73d71e4446a40f7247dc1c2fb, type: 3}
   knight: {fileID: 0}
