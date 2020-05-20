@@ -1487,7 +1487,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: -2
+  m_SortingOrder: -1
   m_TargetDisplay: 0
 --- !u!224 &776153316
 RectTransform:
@@ -3300,6 +3300,7 @@ GameObject:
   - component: {fileID: 1820026540}
   - component: {fileID: 1820026539}
   - component: {fileID: 1820026543}
+  - component: {fileID: 1820026544}
   m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
@@ -3365,7 +3366,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 0
   m_SortingLayerID: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 1
   m_TargetDisplay: 0
 --- !u!224 &1820026542
 RectTransform:
@@ -3406,6 +3407,18 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!225 &1820026544
+CanvasGroup:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1820026538}
+  m_Enabled: 1
+  m_Alpha: 1
+  m_Interactable: 0
+  m_BlocksRaycasts: 0
+  m_IgnoreParentGroups: 0
 --- !u!1 &1842266644
 GameObject:
   m_ObjectHideFlags: 0
