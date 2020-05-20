@@ -13,6 +13,7 @@ public class WaveSpawner : MonoBehaviour
         public int count;
         public float timeBetweenSpawn;
     }
+    public bool hasStarted = false;
     public Wave[] waves;
     public Transform[] spawnPoints;
     public float timeBetweenWaves;
@@ -20,11 +21,12 @@ public class WaveSpawner : MonoBehaviour
     private int currentWaveIndex;
     private Transform player;
     private bool finishedSpawning = false;
+  
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-        StartCoroutine(StartNextWave(currentWaveIndex));
+
     }
     IEnumerator StartNextWave(int index)
     {
@@ -62,6 +64,11 @@ public class WaveSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (hasStarted)
+        {
+            StartCoroutine(StartNextWave(currentWaveIndex));
+            hasStarted = false;
+        }
         if (finishedSpawning == true && GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
         {
             finishedSpawning = false;
