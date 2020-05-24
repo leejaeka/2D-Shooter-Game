@@ -10,7 +10,8 @@ public class Enemy : MonoBehaviour
     public int damage;
     public int health;
     [HideInInspector]
-    public Transform player; 
+    public Transform player;
+    public GameObject weapon;
 
     // Start is called before the first frame update
     public virtual void Start()
@@ -23,6 +24,9 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             Destroy(this.gameObject);
+            
+                Instantiate(weapon, transform.position, transform.rotation);
+            
         }
     }
 

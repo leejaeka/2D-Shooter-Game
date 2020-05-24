@@ -756,10 +756,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 1086568771}
   speed: 0.125
-  minX: -8.01
-  minY: -3.28
-  maxX: 11
-  maxY: 3.09
+  minX: -1.25
+  minY: 0
+  maxX: 2.2
+  maxY: 0.09
 --- !u!4 &501425622
 Transform:
   m_ObjectHideFlags: 0
@@ -768,8 +768,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 501425620}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5854, y: 1.5854, z: 1.5854}
+  m_LocalPosition: {x: 0, y: -0.3, z: 0}
+  m_LocalScale: {x: 3.1968007, y: 3.1968007, z: 3.1968007}
   m_Children:
   - {fileID: 519420032}
   m_Father: {fileID: 0}
@@ -828,7 +828,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 10.896658
+  orthographic size: 13.954345
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2

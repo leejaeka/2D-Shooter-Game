@@ -18,7 +18,6 @@ public class SceneTransition : MonoBehaviour
     {
         hasStarted = true;
         StartCoroutine(Transition(sceneName));
-        Debug.Log("Hello");
     }
     IEnumerator Transition(string sceneName)
     {
