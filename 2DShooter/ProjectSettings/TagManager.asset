@@ -7,6 +7,7 @@ TagManager:
   - Enemy
   - SlimeRed
   - HP
+  - Weapon
   layers:
   - Default
   - TransparentFX

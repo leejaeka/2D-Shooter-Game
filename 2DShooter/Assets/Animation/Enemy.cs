@@ -24,9 +24,12 @@ public class Enemy : MonoBehaviour
         if (health <= 0)
         {
             Destroy(this.gameObject);
+            //Quaternion target = Quaternion.Euler(180, 0, 0);
+            //transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * 1);
+            Instantiate(weapon, transform.position, transform.rotation);
             
-                Instantiate(weapon, transform.position, transform.rotation);
             
+
         }
     }
 

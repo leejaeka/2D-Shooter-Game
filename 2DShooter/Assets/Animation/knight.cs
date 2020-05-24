@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using System.Threading;
 using UnityEngine;
 
@@ -11,6 +12,7 @@ public class knight : MonoBehaviour
     private Vector2 moveAmount;
     private Animator anim;
 
+    public List<Weapon_point> inventory;
     public List<GameObject> hearts;
     public GameObject fullHeart;
     public UnityEngine.UI.GridLayoutGroup gridLayoutGroup;
@@ -67,5 +69,15 @@ public class knight : MonoBehaviour
         {
             Destroy(this.gameObject);
         }
+    }
+    public void AddWeapon(Weapon_point weapon)
+    {
+        Destroy(GameObject.FindGameObjectWithTag("Weapon"));
+        if (!inventory.Contains(weapon))
+        {
+            inventory.Add(weapon);
+        }
+        
+        //Instantiate(weapon, transform.position, transform.rotation, transform);
     }
 }
