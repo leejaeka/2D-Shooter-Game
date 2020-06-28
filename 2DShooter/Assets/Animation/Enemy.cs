@@ -26,7 +26,9 @@ public class Enemy : MonoBehaviour
             Destroy(this.gameObject);
             //Quaternion target = Quaternion.Euler(180, 0, 0);
             //transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * 1);
+            weapon.GetComponent<Weapon_point>().isActive = false;
             Instantiate(weapon, transform.position, transform.rotation);
+            UnityEngine.Debug.Log(weapon.GetComponent<Weapon_point>().isActive);
             
             
 
