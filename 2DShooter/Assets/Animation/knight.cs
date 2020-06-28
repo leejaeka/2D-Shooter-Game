@@ -12,6 +12,11 @@ public class knight : MonoBehaviour
     private Vector2 moveAmount;
     private Animator anim;
 
+    public bool isParrying;
+    public float parryDuration;
+    private float parryTime;
+    private float parryAvailable;
+    public float parryCd;
     public List<Weapon_point> inventory;
     public List<GameObject> hearts;
     public GameObject fullHeart;
@@ -26,11 +31,26 @@ public class knight : MonoBehaviour
         UpdateHealthUI(health);
         grid.alpha = 0f; //this makes everything transparent
         grid.blocksRaycasts = false;
+        isParrying = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (Input.GetMouseButton(1))
+        {
+
+            if (isParrying == false || Time.time >= parryAvailable)
+            {
+                isParrying = true;
+                parryAvailable = Time.time + parryCd;
+                parryTime = Time.time + parryDuration;
+            } 
+        }
+        if (Time.time >= parryTime)
+        {
+            isParrying = false;
+        }
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         moveAmount = moveInput.normalized * speed;
         if (moveInput != Vector2.zero)
@@ -63,12 +83,16 @@ public class knight : MonoBehaviour
     }
     public void TakeDamage(int damageAmount)
     {
-        health -= damageAmount;
-        UpdateHealthUI(health);
-        if (health <= 0)
+        if (!isParrying)
         {
-            Destroy(this.gameObject);
+            health -= damageAmount;
+            UpdateHealthUI(health);
+            if (health <= 0)
+            {
+                Destroy(this.gameObject);
+            }
         }
+        
     }
     public void AddWeapon(Weapon_point weapon)
     {

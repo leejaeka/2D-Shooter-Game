@@ -38,8 +38,14 @@ public class Projectile : MonoBehaviour
             DestroyProjectile();
         } else if (collision.tag == "Player")
         {
-            collision.GetComponent<knight>().TakeDamage(damage);
-            DestroyProjectile();
+            if (collision.GetComponent<knight>().isParrying)
+            {
+                speed = -speed;
+            }
+            else {      
+                collision.GetComponent<knight>().TakeDamage(damage);
+                DestroyProjectile(); }
+            
         }
     }
 }

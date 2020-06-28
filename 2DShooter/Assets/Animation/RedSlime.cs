@@ -1,5 +1,6 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+//using System.Media;
 using System.Security.Cryptography;
 using UnityEngine;
 
@@ -84,7 +85,6 @@ public class RedSlime : Enemy
 
     IEnumerator Attack()
     {
-        player.GetComponent<knight>().TakeDamage(damage);
         Vector2 originalPosition = transform.position;
         Vector2 targetPosition = player.position;
         float percent = 0;
@@ -100,6 +100,16 @@ public class RedSlime : Enemy
 
 
                 anim.SetBool("isAttacking", false); 
+        if (player.GetComponent<knight>().isParrying)
+        {
+            TakeDamage(damage);
+        }
+        else
+        {
+            player.GetComponent<knight>().TakeDamage(damage);
+        }
+        
+        
     }
 }
 

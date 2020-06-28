@@ -2001,6 +2001,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 11
   health: 8
+  isParrying: 0
+  parryDuration: 1
+  parryCd: 2
   inventory:
   - {fileID: 387133693}
   hearts:
@@ -4243,6 +4246,16 @@ PrefabInstance:
         type: 3}
       propertyPath: speed
       value: 11
+      objectReference: {fileID: 0}
+    - target: {fileID: 708884618802684279, guid: cdd555121b8b78a4f9e1415fba473263,
+        type: 3}
+      propertyPath: parryDuration
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 708884618802684279, guid: cdd555121b8b78a4f9e1415fba473263,
+        type: 3}
+      propertyPath: parryCd
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cdd555121b8b78a4f9e1415fba473263, type: 3}
