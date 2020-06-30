@@ -10,8 +10,9 @@ public class orbit : MonoBehaviour
     public float rotSpeed;
 	float timer = 0;
 	public float xSpread;
-	public float zSpread;
-	public float yOffset;
+	public float ySpread;
+	public float zOffset;
+	public float waitTime;
 	// Update is called once per frame
 	void Start()
     {
@@ -19,8 +20,12 @@ public class orbit : MonoBehaviour
     }
 	void Update()
 	{
-		timer += Time.deltaTime * rotSpeed;
-		Rotate();
+		if (Time.time >= waitTime)
+        {
+			timer += Time.deltaTime * rotSpeed;
+			Rotate();
+        }
+		
 	}
 
 	void Rotate()
@@ -28,15 +33,15 @@ public class orbit : MonoBehaviour
 		if (rotateClockwise)
 		{
 			float x = -Mathf.Cos(timer) * xSpread;
-			float z = Mathf.Sin(timer) * zSpread;
-			Vector3 pos = new Vector3(x, yOffset, z);
+			float y = Mathf.Sin(timer) * ySpread;
+			Vector3 pos = new Vector3(x, y, zOffset);
 			transform.position = pos + centerPoint.position;
 		}
 		else
 		{
 			float x = Mathf.Cos(timer) * xSpread;
-			float z = Mathf.Sin(timer) * zSpread;
-			Vector3 pos = new Vector3(x, yOffset, z);
+			float y = Mathf.Sin(timer) * ySpread;
+			Vector3 pos = new Vector3(x, y, zOffset);
 			transform.position = pos + centerPoint.position;
 		}
 	}
