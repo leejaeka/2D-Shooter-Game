@@ -1,0 +1,284 @@
+fileFormatVersion: 2
+guid: 3ac38a19307eb4f4392dd9ded993eb63
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1173233447811802939
+    second: hushtail sprite_0
+  - first:
+      213: 2177909888629514497
+    second: hushtail sprite_1
+  - first:
+      213: -4333280478676761480
+    second: hushtail sprite_2
+  - first:
+      213: -3577629075921200473
+    second: hushtail sprite_3
+  - first:
+      213: 131394497701309557
+    second: hushtail sprite_4
+  - first:
+      213: -7872155907674879454
+    second: hushtail sprite_5
+  - first:
+      213: 2926482369378051022
+    second: hushtail sprite_6
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: hushtail sprite_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 877
+        width: 996
+        height: 554
+      alignment: 9
+      pivot: {x: 0.5113452, y: 0.04385354}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5c812903566d7bfe0800000000000000
+      internalID: -1173233447811802939
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hushtail sprite_1
+      rect:
+        serializedVersion: 2
+        x: 824
+        y: 537
+        width: 151
+        height: 328
+      alignment: 9
+      pivot: {x: 0.7005005, y: 0.9506587}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 101a290318d793e10800000000000000
+      internalID: 2177909888629514497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hushtail sprite_2
+      rect:
+        serializedVersion: 2
+        x: 1056
+        y: 529
+        width: 137
+        height: 328
+      alignment: 9
+      pivot: {x: 0.44455868, y: 0.94255733}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 87446540d581dd3c0800000000000000
+      internalID: -4333280478676761480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hushtail sprite_3
+      rect:
+        serializedVersion: 2
+        x: 1422
+        y: 702
+        width: 551
+        height: 716
+      alignment: 9
+      pivot: {x: 0.3240116, y: 0.26740927}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aa9b9f7f45b95ec0800000000000000
+      internalID: -3577629075921200473
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hushtail sprite_4
+      rect:
+        serializedVersion: 2
+        x: 680
+        y: 31
+        width: 728
+        height: 439
+      alignment: 9
+      pivot: {x: 0.19306049, y: 0.4471789}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57c6de8799ec2d100800000000000000
+      internalID: 131394497701309557
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hushtail sprite_5
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 0
+        width: 521
+        height: 659
+      alignment: 9
+      pivot: {x: 0.7023067, y: 0.19930884}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 22acb8219eb70c290800000000000000
+      internalID: -7872155907674879454
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: hushtail sprite_6
+      rect:
+        serializedVersion: 2
+        x: 1515
+        y: 14
+        width: 475
+        height: 388
+      alignment: 9
+      pivot: {x: 0.5488176, y: 0.47826746}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ec3e834b534fc9820800000000000000
+      internalID: 2926482369378051022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

@@ -1,0 +1,332 @@
+fileFormatVersion: 2
+guid: b6294496c7a0eab4aa15f312e950b934
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 2474052015021917551
+    second: fairySmallSprite_0
+  - first:
+      213: 8544693361843690121
+    second: fairySmallSprite_1
+  - first:
+      213: 7303175841288123774
+    second: fairySmallSprite_2
+  - first:
+      213: 78677861012592348
+    second: fairySmallSprite_3
+  - first:
+      213: -8080490329916077595
+    second: fairySmallSprite_4
+  - first:
+      213: -6087126489567354140
+    second: fairySmallSprite_5
+  - first:
+      213: -1839007498224424388
+    second: fairySmallSprite_6
+  - first:
+      213: -510237620948748893
+    second: fairySmallSprite_7
+  - first:
+      213: -8129226676631834182
+    second: fairySmallSprite_8
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: fairySmallSprite_0
+      rect:
+        serializedVersion: 2
+        x: 540
+        y: 997
+        width: 319
+        height: 281
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6588371339955220800000000000000
+      internalID: 2474052015021917551
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fairySmallSprite_1
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1070
+        width: 333
+        height: 253
+      alignment: 9
+      pivot: {x: 0.110766165, y: 0.14726119}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 98ad4534759d49670800000000000000
+      internalID: 8544693361843690121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fairySmallSprite_2
+      rect:
+        serializedVersion: 2
+        x: 50
+        y: 1074
+        width: 312
+        height: 251
+      alignment: 9
+      pivot: {x: 0.87457013, y: 0.15291569}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e757138dbb71a5560800000000000000
+      internalID: 7303175841288123774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fairySmallSprite_3
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 513
+        width: 253
+        height: 246
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cd6d7550915871100800000000000000
+      internalID: 78677861012592348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fairySmallSprite_4
+      rect:
+        serializedVersion: 2
+        x: 925
+        y: 629
+        width: 330
+        height: 257
+      alignment: 9
+      pivot: {x: 0.09435036, y: 0.16101882}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5e98f527bd45cdf80800000000000000
+      internalID: -8080490329916077595
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fairySmallSprite_5
+      rect:
+        serializedVersion: 2
+        x: 135
+        y: 622
+        width: 315
+        height: 259
+      alignment: 9
+      pivot: {x: 0.89123964, y: 0.1718406}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e2a77e65be268ba0800000000000000
+      internalID: -6087126489567354140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fairySmallSprite_6
+      rect:
+        serializedVersion: 2
+        x: 562
+        y: 62
+        width: 312
+        height: 261
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3aad018c688a76e0800000000000000
+      internalID: -1839007498224424388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fairySmallSprite_7
+      rect:
+        serializedVersion: 2
+        x: 1035
+        y: 134
+        width: 330
+        height: 254
+      alignment: 9
+      pivot: {x: 0.13298377, y: 0.16538046}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a53f4c46954be8f0800000000000000
+      internalID: -510237620948748893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: fairySmallSprite_8
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 111
+        width: 311
+        height: 241
+      alignment: 9
+      pivot: {x: 0.9031035, y: 0.12088038}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab1fab8786f2f2f80800000000000000
+      internalID: -8129226676631834182
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
