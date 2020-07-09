@@ -22,6 +22,7 @@ public class knight : MonoBehaviour
     public GameObject fullHeart;
     public UnityEngine.UI.GridLayoutGroup gridLayoutGroup;
     public CanvasGroup grid;
+    public Transform parry_vis;
     
     // Start is called before the first frame update
     void Start()
@@ -32,6 +33,7 @@ public class knight : MonoBehaviour
         grid.alpha = 0f; //this makes everything transparent
         grid.blocksRaycasts = false;
         isParrying = false;
+        GameObject.Find("knight").transform.GetChild(1).gameObject.transform.GetChild(2).gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.transform.GetChild(2).gameObject.transform.GetChild(0).gameObject.GetComponent<ParticleSystem>().Clear();
     }
 
     // Update is called once per frame
@@ -40,8 +42,9 @@ public class knight : MonoBehaviour
         if (Input.GetMouseButton(1))
         {
 
-            if (isParrying == false || Time.time >= parryAvailable)
+            if (isParrying == false && Time.time >= parryAvailable)
             {
+                GameObject.Find("knight").transform.GetChild(1).gameObject.transform.GetChild(2).gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.transform.GetChild(2).gameObject.transform.GetChild(0).gameObject.GetComponent<ParticleSystem>().Play();
                 isParrying = true;
                 parryAvailable = Time.time + parryCd;
                 parryTime = Time.time + parryDuration;
@@ -49,6 +52,7 @@ public class knight : MonoBehaviour
         }
         if (Time.time >= parryTime)
         {
+            GameObject.Find("knight").transform.GetChild(1).gameObject.transform.GetChild(2).gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.transform.GetChild(2).gameObject.transform.GetChild(0).gameObject.GetComponent<ParticleSystem>().Pause();
             isParrying = false;
         }
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
