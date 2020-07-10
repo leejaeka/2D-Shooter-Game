@@ -593,6 +593,7 @@ MonoBehaviour:
     type: 3}
   gridLayoutGroup: {fileID: 0}
   grid: {fileID: 0}
+  parry_vis: {fileID: 7485572962108049763}
 --- !u!50 &2156765255926529269
 Rigidbody2D:
   serializedVersion: 4
@@ -1239,6 +1240,16 @@ PrefabInstance:
         type: 3}
       propertyPath: EmissionModule.rateOverDistance.scalar
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436175844169241069, guid: 526c421bcba29234292dabd7a78a3772,
+        type: 3}
+      propertyPath: stopAction
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4436175844169241069, guid: 526c421bcba29234292dabd7a78a3772,
+        type: 3}
+      propertyPath: InitialModule.startLifetime.scalar
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6464879464052092391, guid: 526c421bcba29234292dabd7a78a3772,
         type: 3}

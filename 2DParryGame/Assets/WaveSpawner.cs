@@ -18,9 +18,11 @@ public class WaveSpawner : MonoBehaviour
     public Transform[] spawnPoints;
     public float timeBetweenWaves;
     private Wave currentWave;
-    private int currentWaveIndex;
+    public int currentWaveIndex;
     private Transform player;
     private bool finishedSpawning = false;
+    public CanvasGroup endGroup;
+    public GameObject knight;
   
     // Start is called before the first frame update
     void Start()
@@ -79,7 +81,8 @@ public class WaveSpawner : MonoBehaviour
             }
             else
             {
-                UnityEngine.Debug.Log("Game Finished!!!");
+                endGroup.alpha = 1f;
+                endGroup.blocksRaycasts = true;
             }
         }
     }

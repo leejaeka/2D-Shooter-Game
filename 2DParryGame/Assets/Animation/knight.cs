@@ -33,7 +33,7 @@ public class knight : MonoBehaviour
         grid.alpha = 0f; //this makes everything transparent
         grid.blocksRaycasts = false;
         isParrying = false;
-        GameObject.Find("knight").transform.GetChild(1).gameObject.transform.GetChild(2).gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.transform.GetChild(2).gameObject.transform.GetChild(0).gameObject.GetComponent<ParticleSystem>().Clear();
+        GameObject.Find("knight").transform.GetChild(1).gameObject.transform.GetChild(2).gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.transform.GetChild(2).gameObject.transform.GetChild(0).gameObject.GetComponent<ParticleSystem>().Stop();
     }
 
     // Update is called once per frame
@@ -52,7 +52,7 @@ public class knight : MonoBehaviour
         }
         if (Time.time >= parryTime)
         {
-            GameObject.Find("knight").transform.GetChild(1).gameObject.transform.GetChild(2).gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.transform.GetChild(2).gameObject.transform.GetChild(0).gameObject.GetComponent<ParticleSystem>().Pause();
+            GameObject.Find("knight").transform.GetChild(1).gameObject.transform.GetChild(2).gameObject.transform.GetChild(0).gameObject.transform.GetChild(0).gameObject.transform.GetChild(2).gameObject.transform.GetChild(0).gameObject.GetComponent<ParticleSystem>().Stop();
             isParrying = false;
         }
         Vector2 moveInput = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
@@ -66,7 +66,7 @@ public class knight : MonoBehaviour
             anim.SetBool("isRunning", false);
         }
     }
-    private void UpdateHealthUI(int currentHealth)
+    public void UpdateHealthUI(int currentHealth)
     {
         hearts.Clear();
         GameObject[] GOS = GameObject.FindGameObjectsWithTag("HP");
