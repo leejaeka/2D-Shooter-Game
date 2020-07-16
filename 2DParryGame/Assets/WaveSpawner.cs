@@ -22,7 +22,6 @@ public class WaveSpawner : MonoBehaviour
     private Transform player;
     private bool finishedSpawning = false;
     public CanvasGroup endGroup;
-    public GameObject knight;
   
     // Start is called before the first frame update
     void Start()
