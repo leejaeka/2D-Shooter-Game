@@ -22,6 +22,9 @@ public class WaveSpawner : MonoBehaviour
     private Transform player;
     private bool finishedSpawning = false;
     public CanvasGroup endGroup;
+    public CanvasGroup win;
+    public Transform knight_res;
+    public Transform player_spawn;
   
     // Start is called before the first frame update
     void Start()
@@ -39,9 +42,20 @@ public class WaveSpawner : MonoBehaviour
         currentWave = waves[index];
         for(int i = 0; i < currentWave.count; i++)
         {
-            if (player == null)
+            if (i == 0)
             {
-                yield break;
+                var enemies = GameObject.FindGameObjectsWithTag("Enemy");
+                foreach (var enemy in enemies)
+                {
+                    Destroy(enemy);
+                }
+            }
+            if (i == 0 && player == null)
+            {
+                //clear monsters
+                player = knight_res;
+                Instantiate(player, player_spawn.position, player_spawn.rotation);
+                //yield break;
             }
             foreach(Enemy enemy in currentWave.enemies)
             {
@@ -80,8 +94,10 @@ public class WaveSpawner : MonoBehaviour
             }
             else
             {
-                endGroup.alpha = 1f;
-                endGroup.blocksRaycasts = true;
+                //endGroup.alpha = 1f;
+                //endGroup.blocksRaycasts = true;
+                win.alpha = 1;
+                win.blocksRaycasts = true;
             }
         }
     }

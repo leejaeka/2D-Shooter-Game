@@ -22,6 +22,7 @@ public class knight : MonoBehaviour
     public GameObject fullHeart;
     public UnityEngine.UI.GridLayoutGroup gridLayoutGroup;
     public CanvasGroup grid;
+    public CanvasGroup end;
     public Transform parry_vis;
     
     // Start is called before the first frame update
@@ -93,6 +94,8 @@ public class knight : MonoBehaviour
             UpdateHealthUI(health);
             if (health <= 0)
             {
+                end.alpha = 1f;
+                end.blocksRaycasts = true;
                 Destroy(this.gameObject);
             }
         }
