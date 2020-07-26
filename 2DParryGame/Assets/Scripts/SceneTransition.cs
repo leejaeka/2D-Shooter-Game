@@ -12,7 +12,6 @@ public class SceneTransition : MonoBehaviour
     public CanvasGroup win;
     private Animator transitionAnim;
     public GameObject knight;
-    public GameObject knight1;
     // Start is called before the first frame update
     public bool hasStarted;
     void Start()
@@ -33,20 +32,23 @@ public class SceneTransition : MonoBehaviour
     }
     IEnumerator Transition(string sceneName)
     {
-        if (sceneName!= "Start" && sceneName != "Restart" && sceneName !="About" && sceneName != "GoBack") { 
-            win.alpha = 1f;
-            win.blocksRaycasts = true;
+        if (sceneName!= "Start" && sceneName != "Restart" && sceneName !="About" && sceneName != "GoBack") {
+            win.alpha = 0f;
+            win.blocksRaycasts = false;
             transitionAnim.SetTrigger("end");
             yield return new WaitForSeconds(1);
             SceneManager.LoadScene(sceneName);
             
         }else if(sceneName == "Restart"){
-            if (knight == null)
-            {
-                knight = knight1;
-            }
             win.alpha = 0f;
             win.blocksRaycasts = false;
+            var enemies = GameObject.FindGameObjectsWithTag("Enemy");
+            foreach (var enemy in enemies)
+            {
+                Destroy(enemy);
+            }
+            knight.SetActive(true);
+            
             canvasGroup.alpha = 1f;
             canvasGroup.blocksRaycasts = true;
             grid.alpha = 0f;
@@ -55,8 +57,8 @@ public class SceneTransition : MonoBehaviour
             endGroup.blocksRaycasts = false;
             GameObject spawner = GameObject.Find("WaveSpawner");
             spawner.GetComponent<WaveSpawner>().currentWaveIndex = 0;
-            knight.GetComponent<knight>().health = 5;
-            knight.GetComponent<knight>().UpdateHealthUI(5);
+            knight.GetComponent<knight>().health = 3;
+            knight.GetComponent<knight>().UpdateHealthUI(3);
         }
         else if (sceneName == "About")
         {
@@ -80,6 +82,10 @@ public class SceneTransition : MonoBehaviour
             canvasGroup.blocksRaycasts = false;
             grid.alpha = 1f;
             grid.blocksRaycasts = true;
+            win.alpha = 0f;
+            win.blocksRaycasts = false;
+            endGroup.alpha = 0f;
+            endGroup.blocksRaycasts = false;
         }
         
     }

@@ -42,21 +42,7 @@ public class WaveSpawner : MonoBehaviour
         currentWave = waves[index];
         for(int i = 0; i < currentWave.count; i++)
         {
-            if (i == 0)
-            {
-                var enemies = GameObject.FindGameObjectsWithTag("Enemy");
-                foreach (var enemy in enemies)
-                {
-                    Destroy(enemy);
-                }
-            }
-            if (i == 0 && player == null)
-            {
-                //clear monsters
-                player = knight_res;
-                Instantiate(player, player_spawn.position, player_spawn.rotation);
-                //yield break;
-            }
+
             foreach(Enemy enemy in currentWave.enemies)
             {
                 Transform randomSpot = spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length)];
@@ -96,8 +82,14 @@ public class WaveSpawner : MonoBehaviour
             {
                 //endGroup.alpha = 1f;
                 //endGroup.blocksRaycasts = true;
-                win.alpha = 1;
-                win.blocksRaycasts = true;
+                if (GameObject.Find("knight").active == true && !GameObject.Find("knight").GetComponent<knight>().dead)
+                {
+                    win.alpha = 1;
+                    win.blocksRaycasts = true;
+                    //GameObject.Find("knight").GetComponent<knight>().dead = false;
+                }
+                
+                //GameObject.Find("knight").SetActive(false);
             }
         }
     }

@@ -28,7 +28,6 @@ public class Enemy : MonoBehaviour
             //transform.rotation = Quaternion.Slerp(transform.rotation, target, Time.deltaTime * 1);
             weapon.GetComponent<Weapon_point>().isActive = false;
             Instantiate(weapon, transform.position, transform.rotation);
-            UnityEngine.Debug.Log(weapon.GetComponent<Weapon_point>().isActive);
             
             
 

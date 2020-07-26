@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading;
@@ -24,6 +25,7 @@ public class knight : MonoBehaviour
     public CanvasGroup grid;
     public CanvasGroup end;
     public Transform parry_vis;
+    public bool dead = false;
     
     // Start is called before the first frame update
     void Start()
@@ -96,7 +98,10 @@ public class knight : MonoBehaviour
             {
                 end.alpha = 1f;
                 end.blocksRaycasts = true;
-                Destroy(this.gameObject);
+                GameObject.Find("knight").active = false;
+                dead = true;
+                //GameObject.Find("knight").GetComponent<MeshRenderer>().enabled = false;
+                //Destroy(this.gameObject);
             }
         }
         
