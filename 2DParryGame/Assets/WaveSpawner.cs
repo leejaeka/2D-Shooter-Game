@@ -30,6 +30,7 @@ public class WaveSpawner : MonoBehaviour
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
+       
 
     }
     IEnumerator StartNextWave(int index)
@@ -68,11 +69,13 @@ public class WaveSpawner : MonoBehaviour
         if (hasStarted)
         {
             StartCoroutine(StartNextWave(currentWaveIndex));
+            GameObject.Find("knight").GetComponent<knight>().dead = false;
             hasStarted = false;
         }
         if (finishedSpawning == true && GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
         {
             finishedSpawning = false;
+
             if (currentWaveIndex +1 < waves.Length)
             {
                 currentWaveIndex++;
