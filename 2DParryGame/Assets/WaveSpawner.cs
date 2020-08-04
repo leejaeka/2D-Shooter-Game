@@ -20,17 +20,18 @@ public class WaveSpawner : MonoBehaviour
     private Wave currentWave;
     public int currentWaveIndex;
     private Transform player;
-    private bool finishedSpawning = false;
+    public bool finishedSpawning = false;
     public CanvasGroup endGroup;
     public CanvasGroup win;
     public Transform knight_res;
     public Transform player_spawn;
+    private bool didIt;
   
     // Start is called before the first frame update
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player").transform;
-       
+        didIt = false;
 
     }
     IEnumerator StartNextWave(int index)
@@ -38,12 +39,14 @@ public class WaveSpawner : MonoBehaviour
         yield return new WaitForSeconds(timeBetweenWaves);
         StartCoroutine(SpawnWave(index));
     }
+    
     IEnumerator SpawnWave (int index)
-    {
-        currentWave = waves[index];
+    {   
+        
+        currentWave = waves[index];  
+        //Loop through levels
         for(int i = 0; i < currentWave.count; i++)
         {
-
             foreach(Enemy enemy in currentWave.enemies)
             {
                 Transform randomSpot = spawnPoints[UnityEngine.Random.Range(0, spawnPoints.Length)];
@@ -63,20 +66,28 @@ public class WaveSpawner : MonoBehaviour
             yield return new WaitForSeconds(currentWave.timeBetweenSpawn);
         }
     }
+    //public void emptyWave()
+    //{
+        
+    //}
     // Update is called once per frame
     void Update()
     {
         if (hasStarted)
         {
             StartCoroutine(StartNextWave(currentWaveIndex));
+            didIt = true;
             GameObject.Find("knight").GetComponent<knight>().dead = false;
             hasStarted = false;
+        } else
+        {
+            didIt = false;
         }
         if (finishedSpawning == true && GameObject.FindGameObjectsWithTag("Enemy").Length == 0)
         {
             finishedSpawning = false;
 
-            if (currentWaveIndex +1 < waves.Length)
+            if (currentWaveIndex +1 < waves.Length && !didIt)
             {
                 currentWaveIndex++;
                 StartCoroutine(StartNextWave(currentWaveIndex));
@@ -89,6 +100,7 @@ public class WaveSpawner : MonoBehaviour
                 {
                     win.alpha = 1;
                     win.blocksRaycasts = true;
+                    hasStarted = false;
                     //GameObject.Find("knight").GetComponent<knight>().dead = false;
                 }
                 

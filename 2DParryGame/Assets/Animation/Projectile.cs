@@ -13,6 +13,7 @@ public class Projectile : MonoBehaviour
     //public GameObject explosion;
     public int damage;
     public GameObject explosion;
+    
 
     // Start is called before the first frame update
     private void Start()
@@ -34,7 +35,9 @@ public class Projectile : MonoBehaviour
     }
     void Explode()
     {
+        
         Instantiate(explosion, transform.position, transform.rotation);
+        //audioSrc.PlayOneShot(explosion_sound);
         //explosion.Play();
         //ParticleSystem exp = GetComponent<ParticleSystem>();
         //exp.Play();
@@ -44,6 +47,14 @@ public class Projectile : MonoBehaviour
         if(collision.tag == "Enemy")
         {
             collision.GetComponent<Enemy>().TakeDamage(damage);
+            if (collision.GetComponent<RedSlime>()!= null)
+            {
+                collision.GetComponent<RedSlime>().audioSrc.PlayOneShot(collision.GetComponent<RedSlime>().slime_sound);
+            } 
+            else if (collision.GetComponent<RangedEnemy>() != null)
+            {
+                collision.GetComponent<RangedEnemy>().audioSrc.PlayOneShot(collision.GetComponent<RangedEnemy>().penguin_sound);
+            }
             Explode();
             DestroyProjectile();
             
@@ -53,6 +64,7 @@ public class Projectile : MonoBehaviour
             if (collision.GetComponent<knight>().isParrying)
             {
                 speed = -speed;
+                collision.GetComponent<knight>().audioSrc.PlayOneShot(collision.GetComponent<knight>().parry_sound);
             }
             else {      
                 collision.GetComponent<knight>().TakeDamage(damage);

@@ -346,6 +346,7 @@ MonoBehaviour:
   damage: 1
   attackCd: 2
   hushtail: {fileID: 0}
+  hushtail_sound: {fileID: 8300000, guid: 7b4952f8f25ed2b41adfe3eeb7eeb30f, type: 3}
 --- !u!1001 &6705882301270653879
 PrefabInstance:
   m_ObjectHideFlags: 0

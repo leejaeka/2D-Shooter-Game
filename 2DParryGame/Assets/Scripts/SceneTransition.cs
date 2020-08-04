@@ -40,12 +40,18 @@ public class SceneTransition : MonoBehaviour
             SceneManager.LoadScene(sceneName);
             
         }else if(sceneName == "Restart"){
+            GameObject spawner = GameObject.Find("WaveSpawner");
             win.alpha = 0f;
             win.blocksRaycasts = false;
             var enemies = GameObject.FindGameObjectsWithTag("Enemy");
             foreach (var enemy in enemies)
             {
                 Destroy(enemy);
+            }
+            var weapons = GameObject.FindGameObjectsWithTag("Weapon");
+            foreach (var weapon in weapons)
+            {
+                Destroy(weapon);
             }
             knight.SetActive(true);
             
@@ -55,8 +61,9 @@ public class SceneTransition : MonoBehaviour
             grid.blocksRaycasts = false;
             endGroup.alpha = 0f;
             endGroup.blocksRaycasts = false;
-            GameObject spawner = GameObject.Find("WaveSpawner");
             spawner.GetComponent<WaveSpawner>().currentWaveIndex = 0;
+            spawner.GetComponent<WaveSpawner>().hasStarted = false;
+            spawner.GetComponent<WaveSpawner>().finishedSpawning = false;
             knight.GetComponent<knight>().health = 3;
             knight.GetComponent<knight>().UpdateHealthUI(3);
         }
@@ -76,7 +83,25 @@ public class SceneTransition : MonoBehaviour
         }
         else
         {
+            var enemies = GameObject.FindGameObjectsWithTag("Enemy");
+            foreach (var enemy in enemies)
+            {
+                Destroy(enemy);
+            }
+            var weapons = GameObject.FindGameObjectsWithTag("Weapon");
+            foreach (var weapon in weapons)
+            {
+                Destroy(weapon);
+            }
             GameObject spawner = GameObject.Find("WaveSpawner");
+            
+            knight.SetActive(true);
+            knight.GetComponent<knight>().health = 3;
+            knight.GetComponent<knight>().UpdateHealthUI(3);
+            //GameObject spawner = GameObject.Find("WaveSpawner");
+            spawner.GetComponent<WaveSpawner>().currentWaveIndex = 0;
+            spawner.GetComponent<WaveSpawner>().finishedSpawning = false;
+            //spawner.GetComponent<WaveSpawner>().emptyWave();
             spawner.GetComponent<WaveSpawner>().hasStarted = true;
             canvasGroup.alpha = 0f;
             canvasGroup.blocksRaycasts = false;

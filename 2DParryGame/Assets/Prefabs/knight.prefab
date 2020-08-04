@@ -593,7 +593,10 @@ MonoBehaviour:
     type: 3}
   gridLayoutGroup: {fileID: 0}
   grid: {fileID: 0}
+  end: {fileID: 0}
   parry_vis: {fileID: 7485572962108049763}
+  dead: 0
+  parry_sound: {fileID: 8300000, guid: 5421af36d403acc448351071802909b5, type: 3}
 --- !u!50 &2156765255926529269
 Rigidbody2D:
   serializedVersion: 4

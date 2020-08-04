@@ -11,6 +11,7 @@ public class Weapon_point : MonoBehaviour
     public Transform shotPoint;
     public float timeBetweenShots;
     private float shotTime;
+    public Transform player;
     public bool isActive = true; // true if player picks up if i want to implement it 
     // Start is called before the first frame update
     void Start()
@@ -20,7 +21,6 @@ public class Weapon_point : MonoBehaviour
     // Update is called once per frame
     private void Update()
     {
-        UnityEngine.Debug.Log(isActive);
         if (isActive)
         {
             Vector2 direction = Camera.main.ScreenToWorldPoint(Input.mousePosition) - transform.position;
@@ -34,6 +34,7 @@ public class Weapon_point : MonoBehaviour
                 {
                     Instantiate(projectile, shotPoint.position, transform.rotation);
                     shotTime = Time.time + timeBetweenShots;
+                    player.GetComponent<knight>().audioSrc.PlayOneShot(player.GetComponent<knight>().shoot_sound);
                 }
             }
             

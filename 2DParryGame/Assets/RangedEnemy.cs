@@ -10,14 +10,19 @@ public class RangedEnemy : Enemy
     public Transform shotPoint;
     public GameObject bullet;
     public Transform knight;
-
+    public AudioClip bang;
+    public AudioSource audioSrc;
+    public AudioClip penguin_sound;
+    
 
     // Start is called before the first frame update
     public override void Start()
     {
         base.Start();
         anim = GetComponent<Animator>();
+        audioSrc = GetComponent<AudioSource>();
     }
+
 
     // Update is called once per frame
     void Update()
@@ -51,9 +56,10 @@ public class RangedEnemy : Enemy
     {
         Vector2 direction = knight.position - shotPoint.position;
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
-        Quaternion rotation = Quaternion.AngleAxis(angle - 86, Vector3.forward);
+        Quaternion rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
         shotPoint.rotation = rotation;
         Instantiate(bullet, shotPoint.position, shotPoint.rotation);
+        audioSrc.PlayOneShot(bang);
 
     }
 }

@@ -182,6 +182,7 @@ MonoBehaviour:
   damage: 1
   attackCd: 2
   hushtail: {fileID: 0}
+  hushtail_sound: {fileID: 8300000, guid: 7b4952f8f25ed2b41adfe3eeb7eeb30f, type: 3}
 --- !u!1 &6379950376370183219
 GameObject:
   m_ObjectHideFlags: 0

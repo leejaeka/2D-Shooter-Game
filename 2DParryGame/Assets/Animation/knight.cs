@@ -26,10 +26,14 @@ public class knight : MonoBehaviour
     public CanvasGroup end;
     public Transform parry_vis;
     public bool dead = false;
-    
+    public AudioClip parry_sound;
+    public AudioClip shoot_sound;
+    public AudioSource audioSrc;
+    public AudioClip ding;
     // Start is called before the first frame update
     void Start()
     {
+        audioSrc = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         UpdateHealthUI(health);
@@ -90,10 +94,13 @@ public class knight : MonoBehaviour
     }
     public void TakeDamage(int damageAmount)
     {
+        
         if (!isParrying)
         {
+            
             health -= damageAmount;
             UpdateHealthUI(health);
+            audioSrc.PlayOneShot(ding);
             if (health <= 0)
             {
                 end.alpha = 1f;
@@ -103,7 +110,14 @@ public class knight : MonoBehaviour
                 //GameObject.Find("knight").GetComponent<MeshRenderer>().enabled = false;
                 //Destroy(this.gameObject);
             }
+        } 
+        else
+        {
+            audioSrc.PlayOneShot(parry_sound);
         }
+        
+        
+        
         
     }
     public void AddWeapon(Weapon_point weapon)

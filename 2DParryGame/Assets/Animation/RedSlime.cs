@@ -14,6 +14,8 @@ public class RedSlime : Enemy
     private Rigidbody2D rb;
     public Enemy enemyToSummon;
     public float timeBeforeFirstSplit;
+    public AudioSource audioSrc;
+    public AudioClip slime_sound;
 
     public float minX;
     public float minY;
@@ -26,6 +28,7 @@ public class RedSlime : Enemy
     // Start is called before the first frame update
     public override void Start()
     {
+        audioSrc = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
         base.Start();
         float randomX = Random.Range(minX, maxX);
@@ -48,6 +51,7 @@ public class RedSlime : Enemy
             {
                 if (Time.time >= summonTime+ timeBeforeFirstSplit)
                 {
+                    timeBeforeFirstSplit = 0;
                     anim.SetTrigger("summon");
                     summonTime = Time.time + timeBetweenSummons;
                     
@@ -59,18 +63,31 @@ public class RedSlime : Enemy
             } else
             {      
                 anim.SetBool("isRunning", false);
-                if (Time.time >= summonTime+ timeBeforeFirstSplit)
-                {
-                    anim.SetTrigger("summon");
-                    summonTime = Time.time + timeBetweenSummons;
-
-                }
+                
                 if (Time.time >= attackTime)
                 {
                     StartCoroutine(Attack());
                     attackTime = Time.time + timeBetweenAttack;
-                }          
+                }    
+                if (Time.time >= summonTime+ timeBeforeFirstSplit)
+                {
+                    timeBeforeFirstSplit = 0;
+                    anim.SetTrigger("summon");
+                    summonTime = Time.time + timeBetweenSummons;
+
+                }      
             }
+            UnityEngine.Debug.Log("Time"+Time.time);
+            UnityEngine.Debug.Log("summonetime"+summonTime);
+            UnityEngine.Debug.Log(timeBeforeFirstSplit);
+
+            //if (Time.time >= summonTime + timeBeforeFirstSplit)
+            //{
+            //    timeBeforeFirstSplit = 0;
+            //    anim.SetTrigger("summon");
+            //    summonTime = Time.time + timeBetweenSummons;
+
+            //}
         }
     }
 
@@ -102,6 +119,7 @@ public class RedSlime : Enemy
                 anim.SetBool("isAttacking", false); 
         if (player.GetComponent<knight>().isParrying)
         {
+            player.GetComponent<knight>().audioSrc.PlayOneShot(player.GetComponent<knight>().parry_sound);
             TakeDamage(damage);
         }
         else

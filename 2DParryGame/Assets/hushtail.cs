@@ -7,9 +7,12 @@ public class hushtail : Enemy
 {
     public float stopDistance;
     public Transform[] fairies;
+    public AudioSource audioSrc;
+    public AudioClip hushtail_sound;
     // Start is called before the first frame update
     void Start()
     {
+        audioSrc = GetComponent<AudioSource>();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         //fairies = new Enemy[5];
         foreach (Transform fairy in fairies)
