@@ -8,6 +8,7 @@ TagManager:
   - SlimeRed
   - HP
   - Weapon
+  - Audio
   layers:
   - Default
   - TransparentFX

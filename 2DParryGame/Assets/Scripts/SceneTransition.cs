@@ -10,6 +10,7 @@ public class SceneTransition : MonoBehaviour
     public CanvasGroup endGroup;
     public CanvasGroup about;
     public CanvasGroup win;
+    public CanvasGroup setting;
     private Animator transitionAnim;
     public GameObject knight;
     // Start is called before the first frame update
@@ -23,7 +24,8 @@ public class SceneTransition : MonoBehaviour
         about.blocksRaycasts = false;
         win.alpha = 0f;
         win.blocksRaycasts = false;
-
+        setting.alpha = 0f;
+        setting.blocksRaycasts = false;
     }
     public void LoadScene(string sceneName)
     {
@@ -32,7 +34,7 @@ public class SceneTransition : MonoBehaviour
     }
     IEnumerator Transition(string sceneName)
     {
-        if (sceneName!= "Start" && sceneName != "Restart" && sceneName !="About" && sceneName != "GoBack") {
+        if (sceneName!= "Start" && sceneName != "Restart" && sceneName !="About" && sceneName != "GoBack" && sceneName!="Setting") {
             win.alpha = 0f;
             win.blocksRaycasts = false;
             transitionAnim.SetTrigger("end");
@@ -74,10 +76,19 @@ public class SceneTransition : MonoBehaviour
             canvasGroup.alpha = 0f;
             canvasGroup.blocksRaycasts = false;
         }
+        else if (sceneName == "Setting")
+        {
+            setting.alpha = 1f;
+            setting.blocksRaycasts = true;
+            canvasGroup.alpha = 0f;
+            canvasGroup.blocksRaycasts = false;
+        }
         else if (sceneName == "GoBack")
         {
             about.alpha = 0f;
             about.blocksRaycasts = false;
+            setting.alpha = 0f;
+            setting.blocksRaycasts = false;
             canvasGroup.alpha = 1f;
             canvasGroup.blocksRaycasts = true;
         }

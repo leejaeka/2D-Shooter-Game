@@ -13,11 +13,11 @@ public class Projectile : MonoBehaviour
     //public GameObject explosion;
     public int damage;
     public GameObject explosion;
-    
-
+    public GameObject audioSrc;
     // Start is called before the first frame update
     private void Start()
     {
+        audioSrc = GameObject.Find("AudioController");
         Invoke("DestroyProjectile", lifeTime);
         //Destroy(gameObject, lifeTime);  
     }
@@ -44,17 +44,19 @@ public class Projectile : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        
         if(collision.tag == "Enemy")
         {
-            collision.GetComponent<Enemy>().TakeDamage(damage);
+            
             if (collision.GetComponent<RedSlime>()!= null)
             {
-                collision.GetComponent<RedSlime>().audioSrc.PlayOneShot(collision.GetComponent<RedSlime>().slime_sound);
+                audioSrc.GetComponent<AudioControl>().playSound("slime_dmg");
             } 
             else if (collision.GetComponent<RangedEnemy>() != null)
             {
-                collision.GetComponent<RangedEnemy>().audioSrc.PlayOneShot(collision.GetComponent<RangedEnemy>().penguin_sound);
+                audioSrc.GetComponent<AudioControl>().playSound("penguin_dmg");
             }
+            collision.GetComponent<Enemy>().TakeDamage(damage);
             Explode();
             DestroyProjectile();
             
@@ -64,12 +66,13 @@ public class Projectile : MonoBehaviour
             if (collision.GetComponent<knight>().isParrying)
             {
                 speed = -speed;
-                collision.GetComponent<knight>().audioSrc.PlayOneShot(collision.GetComponent<knight>().parry_sound);
+                audioSrc.GetComponent<AudioControl>().playSound("knight_parry");
             }
             else {      
                 collision.GetComponent<knight>().TakeDamage(damage);
                 Explode();
-                DestroyProjectile(); }
+                DestroyProjectile(); 
+            }
             
         }
     }

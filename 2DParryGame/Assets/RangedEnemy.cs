@@ -10,9 +10,8 @@ public class RangedEnemy : Enemy
     public Transform shotPoint;
     public GameObject bullet;
     public Transform knight;
-    public AudioClip bang;
-    public AudioSource audioSrc;
-    public AudioClip penguin_sound;
+    public GameObject audioSrc;
+    public float initialTime;
     
 
     // Start is called before the first frame update
@@ -20,7 +19,8 @@ public class RangedEnemy : Enemy
     {
         base.Start();
         anim = GetComponent<Animator>();
-        audioSrc = GetComponent<AudioSource>();
+        audioSrc = GameObject.Find("AudioController");
+        initialTime = Random.Range(0.0f, 2.0f);
     }
 
 
@@ -41,9 +41,10 @@ public class RangedEnemy : Enemy
             else
             {
                 anim.SetBool("inRange", true);
+                transform.position = Vector2.MoveTowards(transform.position, knight.position, 1* Time.fixedDeltaTime);
             }
 
-            if (Time.time >= attackTime)
+            if (Time.time >= initialTime && Time.time >= attackTime)
             {
 
                 attackTime = Time.time + timeBetweenAttack;
@@ -59,7 +60,7 @@ public class RangedEnemy : Enemy
         Quaternion rotation = Quaternion.AngleAxis(angle - 90, Vector3.forward);
         shotPoint.rotation = rotation;
         Instantiate(bullet, shotPoint.position, shotPoint.rotation);
-        audioSrc.PlayOneShot(bang);
+        audioSrc.GetComponent<AudioControl>().playSound("penguin_bang");
 
     }
 }

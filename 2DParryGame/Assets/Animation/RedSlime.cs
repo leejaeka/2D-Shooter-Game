@@ -14,7 +14,7 @@ public class RedSlime : Enemy
     private Rigidbody2D rb;
     public Enemy enemyToSummon;
     public float timeBeforeFirstSplit;
-    public AudioSource audioSrc;
+    public GameObject audioSrc;
     public AudioClip slime_sound;
 
     public float minX;
@@ -28,13 +28,12 @@ public class RedSlime : Enemy
     // Start is called before the first frame update
     public override void Start()
     {
-        audioSrc = GetComponent<AudioSource>();
         anim = GetComponent<Animator>();
         base.Start();
         float randomX = Random.Range(minX, maxX);
         float randomY = Random.Range(minY, maxY);
         targetPosition = new Vector2(randomX, randomY);
-        
+        audioSrc = GameObject.Find("AudioController");
 
     }
     // Update is called once per frame
@@ -77,9 +76,7 @@ public class RedSlime : Enemy
 
                 }      
             }
-            UnityEngine.Debug.Log("Time"+Time.time);
-            UnityEngine.Debug.Log("summonetime"+summonTime);
-            UnityEngine.Debug.Log(timeBeforeFirstSplit);
+            
 
             //if (Time.time >= summonTime + timeBeforeFirstSplit)
             //{
@@ -119,7 +116,7 @@ public class RedSlime : Enemy
                 anim.SetBool("isAttacking", false); 
         if (player.GetComponent<knight>().isParrying)
         {
-            player.GetComponent<knight>().audioSrc.PlayOneShot(player.GetComponent<knight>().parry_sound);
+            audioSrc.GetComponent<AudioControl>().playSound("knight_parry");
             TakeDamage(damage);
         }
         else

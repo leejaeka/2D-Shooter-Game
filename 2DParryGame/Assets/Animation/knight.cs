@@ -33,7 +33,6 @@ public class knight : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        audioSrc = GetComponent<AudioSource>();
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
         UpdateHealthUI(health);
@@ -113,7 +112,7 @@ public class knight : MonoBehaviour
         } 
         else
         {
-            audioSrc.PlayOneShot(parry_sound);
+            audioSrc.GetComponent<AudioControl>().playSound("knight_parry");
         }
         
         

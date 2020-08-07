@@ -24,7 +24,7 @@ public class orbit : MonoBehaviour
     private float attackTime;
     private bool isGoingBack;
     public Transform hushtail;
-    public AudioClip hushtail_sound;
+    public GameObject audioSrc;
     /*static AudioSource audioSrc;
     public AudioClip hushtail_sound;*/
     // Update is called once per frame
@@ -32,6 +32,7 @@ public class orbit : MonoBehaviour
     {
         //audioSrc = GetComponent<AudioSource>();
         isGoingBack = false;
+        audioSrc = GameObject.Find("AudioController");
     }
 	void Update()
 	{
@@ -90,8 +91,8 @@ public class orbit : MonoBehaviour
         {
             isGoingBack = true;
             hushtail.GetComponent<hushtail>().TakeDamage(damage);
-            hushtail.GetComponent<hushtail>().audioSrc.PlayOneShot(hushtail_sound);
-            player.GetComponent<knight>().audioSrc.PlayOneShot(player.GetComponent<knight>().parry_sound);
+            audioSrc.GetComponent<AudioControl>().playSound("hushtail_dmg");
+            audioSrc.GetComponent<AudioControl>().playSound("knight_parry");
 
         }
         else
